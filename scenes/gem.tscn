@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://chm2xp7ar0xyy"]
+
+[ext_resource type="Texture2D" uid="uid://bjl6fi8bqnmrh" path="res://Assests/egg.png" id="1_rnl0l"]
+[ext_resource type="Script" path="res://scenes/gem.gd" id="1_rxny5"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ktqu3"]
+radius = 25.0
+height = 66.0
+
+[node name="gem" type="Area2D"]
+script = ExtResource("1_rxny5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.0944445, 0.0944445)
+texture = ExtResource("1_rnl0l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -2)
+shape = SubResource("CapsuleShape2D_ktqu3")
